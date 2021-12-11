@@ -206,4 +206,53 @@ public class DataProviderTriangle {
         };
     }
 
+
+
+    @DataProvider(name = "dataProviderGetMessageWithAPlusBLessThanC")
+
+    public static Object[][] dataProviderGetMessageWithAPlusBLessThanC(){
+        return new Object[][] {
+                {1, 2, 3, "a+b<=c"},
+                {0.8, 0.8, 1.6 , "a+b<=c"},
+                { 2, 3, 5 ,"a+b<=c"},
+                { 10000, 123.256874569, 12000 , "a+b<=c"},
+                { 123.256874569, 10000, 12000 , "a+b<=c"},
+                { Double.MAX_VALUE/2, Double.MAX_VALUE/2,  Double.MAX_VALUE,"a+b<=c"}
+
+
+        };
+    }
+
+    @DataProvider(name = "dataProviderGetMessageWithAPlusCLessThanB")
+
+    public static Object[][] dataProviderGetMessageWithAPlusCLessThanB(){
+        return new Object[][] {
+                {1, 3, 2, "a+c<=b"},
+                {0.8, 1.6, 0.8 , "a+c<=b"},
+                { 2, 5, 3 ,"a+c<=b"},
+                { 10000, 10123.256874569, 123.256874569 , "a+c<=b"},
+                { 123.256874569, 12000, 10000 , "a+c<=b"},
+                { Double.MAX_VALUE/2, Double.MAX_VALUE,  Double.MAX_VALUE/2,"a+c<=b"}
+
+
+        };
+    }
+
+    @DataProvider(name = "dataProviderGetMessageWithBPlusCLessThanA")
+
+    public static Object[][] dataProviderGetMessageWithBPlusCLessThanA(){
+        return new Object[][] {
+                {3, 1, 2, "b+c<=a"},
+                {1.6, 0.8, 0.8 , "b+c<=a"},
+                { 5, 2, 3 ,"b+c<=a"},
+                { 10123.256874569, 10000, 123.256874569 , "b+c<=a"},
+                { 12000, 10000, 123.256874569 , "b+c<=a"},
+                { Double.MAX_VALUE, Double.MAX_VALUE/2,  Double.MAX_VALUE/2,"b+c<=a"}
+
+
+        };
+    }
+
+
+
 }

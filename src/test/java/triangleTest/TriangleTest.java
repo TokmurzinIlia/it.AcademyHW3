@@ -119,6 +119,27 @@ public class TriangleTest {
         assertEquals(triangle.getMessage(), "a<=0&b<=0&c<=0");
     }
 
+    @Test(dataProvider = "dataProviderGetMessageWithAPlusBLessThanC", dataProviderClass = DataProviderTriangle.class)
+    public void testGetMessageWithAPlusBLessThanC(double a, double b, double c, String expectedSting){
+        triangle = new Triangle(a, b, c);
+        triangle.checkTriangle();
+        assertEquals(triangle.getMessage(), expectedSting);
+    }
+
+
+    @Test(dataProvider = "dataProviderGetMessageWithAPlusCLessThanB", dataProviderClass = DataProviderTriangle.class)
+    public void testGetMessageWithAPlusCLessThanB(double a, double b, double c, String expectedSting){
+        triangle = new Triangle(a, b, c);
+        triangle.checkTriangle();
+        assertEquals(triangle.getMessage(), expectedSting);
+    }
+
+    @Test(dataProvider = "dataProviderGetMessageWithBPlusCLessThanA", dataProviderClass = DataProviderTriangle.class)
+    public void testGetMessageWithBPlusCLessThanA(double a, double b, double c, String expectedSting){
+        triangle = new Triangle(a, b, c);
+        triangle.checkTriangle();
+        assertEquals(triangle.getMessage(), expectedSting);
+    }
 
 
 
