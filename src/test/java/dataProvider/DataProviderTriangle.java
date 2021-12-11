@@ -253,6 +253,83 @@ public class DataProviderTriangle {
         };
     }
 
+    @DataProvider(name = "dataProviderDetectEquilateralTriangle")
+
+    public static Object[][] dataProviderDetectEquilateralTriangle(){
+        return new Object[][] {
+                {1, 1, 1, 1},
+                {0.8, 0.8, 0.8 , 1},
+                { 5, 5, 5 ,1},
+                { 10123.256874569, 10123.256874569, 10123.256874569 , 1},
+                { 231256489, 231256489, 231256489 , 1},
+                { Double.MAX_VALUE, Double.MAX_VALUE,  Double.MAX_VALUE, 1}
+
+
+        };
+    }
+
+    @DataProvider(name = "dataProviderDetectIsoscelesTriangle")
+
+    public static Object[][] dataProviderDetectIsoscelesTriangle(){
+        return new Object[][] {
+                {3, 3, 5, 2},
+                {0.8, 0.8, 0.9 , 2},
+                { 5, 5, 8 ,2},
+                { 10123.256874569, 10123.256874569, 10125 , 2},
+                { 231256489, 231256489, 331256489 , 2}
+
+
+        };
+    }
+
+
+    @DataProvider(name = "dataProviderDetectOrdynaryTriangle")
+
+    public static Object[][] dataProviderDetectOrdynaryTriangle(){
+        return new Object[][] {
+                {5, 6, 7, 4},
+                {0.8, 0.7, 0.9 , 4},
+                { 5, 4, 8 ,4},
+                { 10123.256874569, 10122.256874569, 10125 , 4},
+                { 231256489, 236459489, 331256489 , 4}
+
+
+        };
+    }
+
+
+
+
+    @DataProvider(name = "dataProviderDetectRectangularTriangle")
+
+    public static Object[][] dataProviderDetectRectangularTriangle(){
+        return new Object[][] {
+                {115, 252, 277, 8},
+                {51, 140, 149 , 8},
+                { 21, 220, 221 ,8},
+                { 105, 208, 233, 8},
+                { 3, 4, 5, 8}
+
+
+        };
+    }
+
+
+
+    @DataProvider(name = "dataProviderDetectCombinationOfSignsTriangle")
+
+    public static Object[][] dataProviderDetectCombinationOfSignsTriangle(){
+        return new Object[][] {
+                {115, 115, 115*Math.sqrt(2), 10},
+                {51, 51, 51*Math.sqrt(2) , 10},
+                { 21, 21, 21*Math.sqrt(2) ,10},
+                { 105357, 105357, 105357*Math.sqrt(2), 10},
+                { Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE*Math.sqrt(2), 10}
+
+
+        };
+    }
+
 
 
 }

@@ -134,12 +134,48 @@ public class TriangleTest {
         assertEquals(triangle.getMessage(), expectedSting);
     }
 
+
     @Test(dataProvider = "dataProviderGetMessageWithBPlusCLessThanA", dataProviderClass = DataProviderTriangle.class)
     public void testGetMessageWithBPlusCLessThanA(double a, double b, double c, String expectedSting){
         triangle = new Triangle(a, b, c);
         triangle.checkTriangle();
         assertEquals(triangle.getMessage(), expectedSting);
     }
+
+    @Test(dataProvider = "dataProviderDetectEquilateralTriangle", dataProviderClass = DataProviderTriangle.class)
+    public void testDetectEquilateralTriangle(double a, double b, double c, int expectedNumberTriangle){
+        triangle = new Triangle(a, b, c);
+        assertEquals(triangle.detectTriangle(), expectedNumberTriangle);
+    }
+
+
+    @Test(dataProvider = "dataProviderDetectIsoscelesTriangle", dataProviderClass = DataProviderTriangle.class)
+    public void testDetectIsoscelesTriangle(double a, double b, double c, int expectedNumberTriangle){
+        triangle = new Triangle(a, b, c);
+        assertEquals(triangle.detectTriangle(), expectedNumberTriangle);
+    }
+
+
+    @Test(dataProvider = "dataProviderDetectOrdynaryTriangle", dataProviderClass = DataProviderTriangle.class)
+    public void testDetectOrdynaryTriangle(double a, double b, double c, int expectedNumberTriangle){
+        triangle = new Triangle(a, b, c);
+        assertEquals(triangle.detectTriangle(), expectedNumberTriangle);
+    }
+
+    @Test(dataProvider = "dataProviderDetectRectangularTriangle", dataProviderClass = DataProviderTriangle.class)
+    public void testDetectRectangularTriangle(double a, double b, double c, int expectedNumberTriangle){
+        triangle = new Triangle(a, b, c);
+        assertEquals(triangle.detectTriangle(), expectedNumberTriangle);
+    }
+
+
+    @Test(dataProvider = "dataProviderDetectCombinationOfSignsTriangle", dataProviderClass = DataProviderTriangle.class)
+    public void testDetectCombinationOfSignsTriangle(double a, double b, double c, int expectedNumberTriangle){
+        triangle = new Triangle(a, b, c);
+        assertEquals(triangle.detectTriangle(), expectedNumberTriangle);
+    }
+
+
 
 
 
