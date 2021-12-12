@@ -330,6 +330,19 @@ public class DataProviderTriangle {
         };
     }
 
+    @DataProvider(name = "dataProviderGetSquareTriangle")
+
+    public static Object[][] dataProviderGetSquareTriangle(){
+        return new Object[][] {
+                {2, 3, 4, 2.9047375096555625 },
+                {105, 208, 233, 10920},
+                {0.8, 0.7, 0.9, 0.2683281572999748 },
+                {10123.256874569, 10123.256874569, 10125, 44380377.73636365},
+                {5, 5, 5, 10.825317547305483}
+
+        };
+    }
+
 
 
 }

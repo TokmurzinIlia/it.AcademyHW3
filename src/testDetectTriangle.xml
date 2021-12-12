@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="suite5">
+    <test name="Test detect triangle">
+        <groups>
+            <run>
+                <include name="Test detect triangle"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="triangleTest.TriangleTest">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
